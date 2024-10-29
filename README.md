@@ -18,13 +18,22 @@ int main() {
         
         printf("\n");
     }
-        printf("the lignes paire est : \n");
+        printf("afficher les lignes paire est : \n");
         for(int i = 0 ; i < 4 ; i+=2){
             for(int j = 0 ; j < 5 ; j++){
                 printf("%d",mat[i][j]);
             }
             printf("\n");
         }
+        printf("afficher les lignes impaire est : \n");
+        for(int i = 0 ; i < 4 ; i++){
+            for(int j = 0 ; j < 5 ; j+=2){
+                printf("%d",mat[i][j]);
+            }
+            printf("\n");
+        }
+
+        
     
     return 0;
 }
