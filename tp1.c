@@ -26,7 +26,7 @@ int main()
     }
    //q3
     printf("\n  Lignes impair :\n");
-    for(int i = 0; i < 3; i++) 
+    for(int i = 0; i < 5; i++) 
     {
         for(int j = 1; j < 5; j += 2) 
         { 
@@ -71,7 +71,7 @@ int main() {
     }
     printf("the secod matrix :");
     printf("\n");
-    for ( i = 0; i < s; i++) {
+    for ( i = 1; i < s; i++) {
         for (j = i + 1; j < s; j++) {
              t = m[i][j];
             m[i][j] = m[j][i];
