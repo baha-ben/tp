@@ -33,7 +33,6 @@ void ChargerTab(char *p, char Tab[]) {
         Tab[i] = p[i];
         i++;
     }
-    Tab[i] = '\0';  
 }
 
 // 4
