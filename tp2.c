@@ -13,7 +13,7 @@ char *chargerChaine(int N){
         if (longueur > N) {  
             printf("Erreur  La chaîne dépasse la taille maximale "); //اذا تحقق الشرط
         }   else {
-              break; //
+              break; //اذا الشرط لم يتحقق
             }
     }
     return chaine;
