@@ -12,7 +12,7 @@ int longueur(char* chaine) {
     while (chaine[i] != '\0') {
         i++;
     }
-    printf("la longeur est: %d", i);
+    printf("la longeur est: %d \n", i);
     return i;
 }
 // 3
@@ -23,6 +23,7 @@ void ChargerTab(char *p, char Tab[]) {
         i++;
     }
     Tab[i] = '\0'; 
+    
 }
 
 // 4
@@ -31,6 +32,7 @@ void InverserTab(char Tab[], char T[], int b) {
         T[i] = Tab[b - 1 - i]; 
     }
     T[b] = '\0'; 
+    
 }
 // 5
 void AfficherTab(char Tab[], int b) {
@@ -39,32 +41,20 @@ void AfficherTab(char Tab[], int b) {
     }
     printf("\n");
 }
-int main (){
-  int N ;
-    printf("Entrer size la chaine : ");
-    scanf("%d",&N);
-  char *chaine = chargerChaine(N) ;
-  // longueur de chaine
-  
-  int b = longueur(chaine);
-  
-  // charger le chaine
-  
-   char Tab[b + 1], T[b + 1];
-    ChargerTab(chaine, Tab);
-    
-    //afficher chaine originale
-    
-    printf("\nChaine originale: ");
-    AfficherTab(Tab, b);
+int main(){
+char *ch; int n; 
+printf("veuillez saisir la taille maximale de la chaine:");
+scanf("%d",&n); 
+ch=chargerChaine(n);
+int m=longueur(ch);
+char Tab[m], T[m];
+ChargerTab(ch,Tab);
+printf("l'affichege de tableau :");
+AfficherTab(Tab,m);
+InverserTab(Tab,T,m);
+printf("la list inverse est  :");
 
-   //inverse de chaine 
-    InverserTab(Tab, T, b);
-
-    printf(" Chaine inversee: ");
-    AfficherTab(T, b);
-
-    free(chaine);
-   
-  return 0;
+AfficherTab(T,m);
+free(ch);
+return 0;
 }
