@@ -3,9 +3,20 @@
 #include<string.h>
 char *chargerChaine(int N){
  char *chaine = (char *)malloc((N+1)*sizeof(char));
-     printf("Entrer la chaine : ");
-     scanf("%s",chaine);
-     return chaine ;
+     while (1) {
+        printf("Veuillez saisir une chaîne de caractères (max %d caractères): ",N);
+        scanf(" %[^\n]", chaine);    // لقراءة الفراغات في الكلمة
+        int longueur = 0;
+        for (int i = 0; chaine[i] != '\0'; i++) {
+            longueur++;   //طول الحلقة للمقارنة 
+        }
+        if (longueur > N) {  
+            printf("Erreur  La chaîne dépasse la taille maximale "); //اذا تحقق الشرط
+        }   else {
+              break; //
+            }
+    }
+    return chaine;
 } 
 int longueur(char* chaine) {
     int i = 0;
@@ -22,8 +33,7 @@ void ChargerTab(char *p, char Tab[]) {
         Tab[i] = p[i];
         i++;
     }
-    Tab[i] = '\0'; 
-    
+    Tab[i] = '\0';  
 }
 
 // 4
@@ -31,8 +41,7 @@ void InverserTab(char Tab[], char T[], int b) {
     for (int i = 0; i < b; i++) {
         T[i] = Tab[b - 1 - i]; 
     }
-    T[b] = '\0'; 
-    
+    T[b] = '\0';   
 }
 // 5
 void AfficherTab(char Tab[], int b) {
